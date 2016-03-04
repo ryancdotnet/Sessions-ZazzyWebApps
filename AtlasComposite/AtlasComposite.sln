@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Atlas.WebApp", "Atlas.WebApp\Atlas.WebApp.csproj", "{90A03044-6494-4506-8348-BF848901D30B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Atlas.WebApi", "Atlas.WebApi\Atlas.WebApi.csproj", "{743EA16A-E590-4F6F-839B-8B5CD7F22FDC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Atlas.Model", "Atlas.Model\Atlas.Model.csproj", "{5D83FABC-1902-4C4C-B63C-B2DC35737141}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{90A03044-6494-4506-8348-BF848901D30B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90A03044-6494-4506-8348-BF848901D30B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90A03044-6494-4506-8348-BF848901D30B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90A03044-6494-4506-8348-BF848901D30B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{743EA16A-E590-4F6F-839B-8B5CD7F22FDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{743EA16A-E590-4F6F-839B-8B5CD7F22FDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{743EA16A-E590-4F6F-839B-8B5CD7F22FDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{743EA16A-E590-4F6F-839B-8B5CD7F22FDC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D83FABC-1902-4C4C-B63C-B2DC35737141}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D83FABC-1902-4C4C-B63C-B2DC35737141}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D83FABC-1902-4C4C-B63C-B2DC35737141}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D83FABC-1902-4C4C-B63C-B2DC35737141}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
