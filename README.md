@@ -15,3 +15,8 @@ The Atlas Project showcases:
 I tried to keep everything as basic as possible to help reduce clutter and business logic confusion. The focus is not on the app itself, but how it works technically.
 
 I would suggest downloading a copy of this repository and opening up the Visual Studio solution and running it. (Ensure that you start both the Atlas.WebApi AND Atlas.WebApp projects together. You can start both projects automatically in VS with the settings on Menu->Debug->Set Startup Projects)
+
+Here are the links to the Liveweave sessions used during the presentation. These help show isolated examples of CSS styling techniques:
+* Continuous Progress Bar - http://liveweave.com/kbIS9P
+* 2 Divs = Radio Buttons - http://liveweave.com/gGk32V
+* 2 Divs = Checkboxes - http://liveweave.com/3jtqZA
