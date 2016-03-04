@@ -20,4 +20,4 @@ Here are the links to the Liveweave sessions used during the presentation. These
 * 2 Divs = Radio Buttons - http://liveweave.com/gGk32V
 * 2 Divs = Checkboxes - http://liveweave.com/3jtqZA
 * 2 Divs = Continuous Progress Bar - http://liveweave.com/kbIS9P
-* 2 Divs = Stopwatch Widget - 
+* 2 Divs = Stopwatch Widget - http://liveweave.com/uQYPiM
