@@ -1,0 +1,27 @@
+﻿@{
+    ViewBag.Title = "Status";
+}
+
+<h1>Status</h1>
+
+<h3>Processes Overview</h3>
+
+<div class="processes" data-bind="foreach: processes">
+    <div class="process" data-bind="css: { pending: $data.ProcessStatus() == 0, processing: $data.ProcessStatus() == 1, completed: $data.ProcessStatus() == 2 }">
+        <div class="p-id"><span>Process #</span> <span data-bind="text: $data.ProcessId"></span></div>
+        <div class="p-status" data-bind="text: $data.ProcessStatusText"></div>
+        <div class="p-clock-box">
+            <div class="p-clock-dot"></div>
+        </div>
+        <div class="p-start"><span>Start:</span><br /><span data-bind="text: $data.StartDate"></span></div>
+        <div class="p-end"><span>End:</span><br /><span data-bind="text: $data.EndDate"></span></div>
+    </div>
+</div>
+
+<div class="refresh-button">Refresh</div>
+
+<script type="text/javascript">
+
+    //Immediately execute
+    atlas.setPageClass(atlas.status);
+</script>

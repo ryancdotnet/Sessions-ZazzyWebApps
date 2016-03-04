@@ -1,0 +1,185 @@
+﻿.refresh-button
+{
+    padding: 8px 10px;
+    border: 2px solid #808080;
+}
+
+.refresh-button:hover
+{
+    background-color: #808080;
+    color: #fff;
+    cursor: pointer;
+}
+
+.process
+{
+    width: 150px;
+    height: 300px;
+    display: inline-block;
+    margin-right: 30px;
+    vertical-align: top;
+    text-align: center;
+}
+
+.p-id
+{
+    font-size: 1.5em;
+}
+
+.p-status
+{
+    font-size: 2em;
+    position: absolute;
+    margin-top: 67px;
+    width: 150px;
+    z-index: 4;
+}
+
+.process.completed .p-status
+{
+    color: #fff;
+}
+
+.p-clock-box
+{
+    position: relative;
+    border: 2px solid #3377CC;
+    width: 150px;
+    height: 150px;
+    border-radius: 75px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.p-clock-dot
+{
+    position: absolute;
+    background-color: #3377CC;
+    width: 20px;
+    height: 20px;
+    top: 65px;
+    left: 65px;
+    border-radius: 15px;
+    display: none;
+}
+
+@keyframes clock-anim
+{
+    0%{
+        transform: rotate(-90deg) translate(75px);
+    }
+
+    100%{
+        transform: rotate(270deg) translate(75px);
+    }
+}
+
+@keyframes pending-anim
+{
+    /* This animation creates a flashing border effect for pending */
+    0%{
+        border-color: transparent;
+    }
+    50%{
+        border-color:#808080;
+    }
+    100%{
+        border-color:transparent;
+    }
+}
+
+.process.pending .p-clock-box
+{
+    border-color: #808080;
+    animation-name: pending-anim;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+}
+
+.process.pending .p-status
+{
+    color: #808080;
+}
+
+.process.processing .p-clock-dot
+{
+    display: inline-block;
+    animation-name: clock-anim;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+}
+
+.process.processing .p-status
+{
+    color: #3377CC;
+}
+
+.process.completed .p-clock-box
+{
+    background-color: #3377CC;
+}
+
+/* Media Queries: allows you to build responsive CSS styles */
+/* In this example, when the window width is less than or equal to 600px, these styles apply */
+@media (max-width: 600px)
+{
+    /* Any CSS styles in here will overwrite previous ones if they match */
+    .process
+    {
+        width: 100%;
+        text-align: left;
+        border-bottom: 1px solid #808080;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        height: auto;
+    }
+
+    .p-clock-box
+    {
+        border-radius: 0px;
+        width: 100%;
+        position: relative;
+        height: 60px;
+        overflow: hidden;
+    }
+
+    .p-clock-dot
+    {
+        top: 0;
+        left: 0;
+        height: 100%;
+        border-radius: 0px;
+    }
+
+    /* We can even overwrite/change animations, just like styles */
+    @keyframes clock-anim
+    {
+        0%{
+            left: -10%;
+        }
+        50%{
+            left: 100%;
+        }
+        100%{
+            left: -10%;
+        }
+    }
+
+    .process.processing .p-clock-dot
+    {
+        animation-duration: 2s;
+    }
+
+    .p-status
+    {
+        margin-top: 25px;
+        margin-left: 10px;
+    }
+
+    .p-start, .p-end
+    {
+        display: none;
+    }
+}

@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atlas</title>
+    @Styles.Render("~/Content/css")
+</head>
+<body>
+    <div class="header">
+        <img class="page-icon" src="http://megaicons.net/static/img/icons_sizes/8/178/512/maps-and-geolocation-globe-icon.png"/>
+        <div class="app-title">Atlas</div>
+
+        <ul class="menu">
+            <li class="mo-menu">Menu</li><!--
+            --><li class="mo-home sel">Home</li><!--
+            --><li class="mo-status">Status</li><!--
+            --><li class="mo-about">About</li><!--
+            --><li class="mo-contact">Contact</li>
+        </ul>
+    </div>
+    <div class="guts">
+        @RenderBody()
+    </div>
+    
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/knockout")
+    @Scripts.Render("~/bundles/atlas")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
