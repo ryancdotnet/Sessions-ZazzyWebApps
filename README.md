@@ -21,3 +21,58 @@ Here are the links to the Liveweave sessions used during the presentation. These
 * 2 Divs = Checkboxes - http://liveweave.com/3jtqZA
 * 2 Divs = Continuous Progress Bar - http://liveweave.com/kbIS9P
 * 2 Divs = Stopwatch Widget - http://liveweave.com/uQYPiM
+
+Using a REST API client (like Postman - http://www.getpostman.com/), you can call the API to insert and modify some data to see the working processes screen. Here are some sample calls you can make:
+
+1. Insert a new Process
+
+  POST /Processes/ HTTP/1.1
+  Host: localhost:50989
+  Content-Type: application/json
+  Cache-Control: no-cache
+  Postman-Token: 63890926-534d-7b9a-2f16-bbdef4c1049d
+
+  {
+      ProcessId: 1,
+      ProcessStatus: "Pending",
+      StartDate: null,
+      EndDate: null
+  }
+  
+2. Update a Process to "Processing"
+
+  POST /Processes/1 HTTP/1.1
+  Host: localhost:50989
+  Content-Type: application/json
+  Cache-Control: no-cache
+  Postman-Token: 5883a47f-b81e-c3bc-1238-5f80bf9e1e93
+  
+  {
+      ProcessId: 1,
+      ProcessStatus: "Processing",
+      StartDate: "2016-03-07 01:00:00 PM",
+      EndDate: null
+  }
+  
+3. Update a Process to "Complete"
+
+  POST /Processes/1 HTTP/1.1
+  Host: localhost:50989
+  Content-Type: application/json
+  Cache-Control: no-cache
+  Postman-Token: 0d3545e1-21eb-4b6a-1018-9d748445d629
+  
+  {
+      ProcessId: 1,
+      ProcessStatus: "Complete",
+      StartDate: "2016-03-07 01:00:00 PM",
+      EndDate: "2016-03-07 01:24:00 PM"
+  }
+  
+4. Delete all Processes
+  
+  DELETE /Processes/ HTTP/1.1
+  Host: localhost:50989
+  Content-Type: application/json
+  Cache-Control: no-cache
+  Postman-Token: d20f2a96-b8a3-4af3-5935-b3695744dfc6
