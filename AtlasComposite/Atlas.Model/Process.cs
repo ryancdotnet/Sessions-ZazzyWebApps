@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 
 namespace Atlas.Model
@@ -23,7 +24,7 @@ namespace Atlas.Model
                 if (_ProcessId != value)
                 {
                     _ProcessId = value;
-                    OnPropertyChanged("ProcessId");
+                    OnPropertyChanged();
                 }
             }
         }
@@ -40,7 +41,7 @@ namespace Atlas.Model
                 if (_ProcessStatus != value)
                 {
                     _ProcessStatus = value;
-                    OnPropertyChanged("ProcessStatus");
+                    OnPropertyChanged();
                 }
             }
         }
@@ -57,7 +58,7 @@ namespace Atlas.Model
                 if (_StartDate != value)
                 {
                     _StartDate = value;
-                    OnPropertyChanged("StartDate");
+                    OnPropertyChanged();
                 }
             }
         }
@@ -74,7 +75,7 @@ namespace Atlas.Model
                 if (_EndDate != value)
                 {
                     _EndDate = value;
-                    OnPropertyChanged("EndDate");
+                    OnPropertyChanged();
                 }
             }
         }
@@ -83,7 +84,7 @@ namespace Atlas.Model
 
         public event PropertyChangedEventHandler PropertyChanged;
 
-        private void OnPropertyChanged(string propertyName)
+        private void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
