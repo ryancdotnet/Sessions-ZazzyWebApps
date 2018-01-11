@@ -22,9 +22,11 @@ Here are the links to the Liveweave sessions used during the presentation. These
 * 2 Divs = Continuous Progress Bar - http://liveweave.com/kbIS9P
 * 2 Divs = Stopwatch Widget - http://liveweave.com/uQYPiM
 
+## Working with the API
+
 Using a REST API client (like Postman - http://www.getpostman.com/), you can call the API to insert and modify some data to see the working processes screen. Here are some sample calls you can make:
 
-1. Insert a new Process
+### 1. Insert a new Process
 
   POST /Processes/ HTTP/1.1
   Host: localhost:50989
@@ -39,7 +41,7 @@ Using a REST API client (like Postman - http://www.getpostman.com/), you can cal
       EndDate: null
   }
   
-2. Update a Process to "Processing"
+### 2. Update a Process to "Processing"
 
   POST /Processes/1 HTTP/1.1
   Host: localhost:50989
@@ -54,7 +56,7 @@ Using a REST API client (like Postman - http://www.getpostman.com/), you can cal
       EndDate: null
   }
   
-3. Update a Process to "Complete"
+### 3. Update a Process to "Complete"
 
   POST /Processes/1 HTTP/1.1
   Host: localhost:50989
@@ -69,7 +71,7 @@ Using a REST API client (like Postman - http://www.getpostman.com/), you can cal
       EndDate: "2016-03-07 01:24:00 PM"
   }
   
-4. Delete all Processes
+### 4. Delete all Processes
   
   DELETE /Processes/ HTTP/1.1
   Host: localhost:50989
